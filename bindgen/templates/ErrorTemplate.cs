@@ -56,6 +56,10 @@ class {{ ffi_converter_name }} : FfiConverterRustBuffer<{{ type_name }}>, CallSt
 {%- call cs::docstring(e, 0) %}
 public class {{ type_name }}: UniffiException{% if contains_object_references %}, IDisposable {% endif %} {
     // Each variant is a nested class
+    {{ type_name }}(): base() {}
+
+    {{ type_name }}(string message): base(message) {}
+    
     {% for variant in e.variants() -%}
     {%- call cs::docstring(variant, 4) %}
     {% if !variant.has_fields() -%}
@@ -70,8 +74,8 @@ public class {{ type_name }}: UniffiException{% if contains_object_references %}
         // Constructor
         public {{ variant.name()|exception_name }}(
                 {%- for field in variant.fields() %}
-                {{ field|type_name}} {{ field.name()|var_name }}{% if loop.last %}{% else %}, {% endif %}
-                {%- endfor %}) {
+                    {{ field|type_name}} {{ field.name()|var_name }}{% if loop.last %}{% else %}, {% endif %}
+                {%- endfor %}) : base($"{%- for field in variant.fields() %} {{ field.name()|var_name }}= { {{ field.name()|var_name }} } {% if loop.last %}{% else %}, {% endif %}{%- endfor %})") {
             {%- for field in variant.fields() %}
             this.{{ field.name()|var_name }} = {{ field.name()|var_name }};
             {%- endfor %}
