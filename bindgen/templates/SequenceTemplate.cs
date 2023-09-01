@@ -4,19 +4,19 @@
 
 {%- let inner_type_name = inner_type|type_name %}
 
-class {{ ffi_converter_name }}: FfiConverterRustBuffer<List<{{ inner_type_name }}>> {
+class {{ ffi_converter_name }}: FfiConverterRustBuffer<{{ inner_type_name }}[]> {
     public static {{ ffi_converter_name }} INSTANCE = new {{ ffi_converter_name }}();
 
-    public override List<{{ inner_type_name }}> Read(BigEndianStream stream) {
+    public override {{ inner_type_name }}[] Read(BigEndianStream stream) {
         var length = stream.ReadInt();
         var result = new List<{{ inner_type_name }}>(length);
         for (int i = 0; i < length; i++) {
             result.Add({{ inner_type|read_fn }}(stream));
         }
-        return result;
+        return result.ToArray();
     }
 
-    public override int AllocationSize(List<{{ inner_type_name }}> value) {
+    public override int AllocationSize({{ inner_type_name }}[] value) {
         var sizeForLength = 4;
 
         // details/1-empty-list-as-default-method-parameter.md
@@ -28,14 +28,14 @@ class {{ ffi_converter_name }}: FfiConverterRustBuffer<List<{{ inner_type_name }
         return sizeForLength + sizeForItems;
     }
 
-    public override void Write(List<{{ inner_type_name }}> value, BigEndianStream stream) {
+    public override void Write({{ inner_type_name }}[] value, BigEndianStream stream) {
         // details/1-empty-list-as-default-method-parameter.md
         if (value == null) {
             stream.WriteInt(0);
             return;
         }
 
-        stream.WriteInt(value.Count);
-        value.ForEach(item => {{ inner_type|write_fn }}(item, stream));
+        stream.WriteInt(value.Length);
+        value.ToList().ForEach(item => {{ inner_type|write_fn }}(item, stream));
     }
 }

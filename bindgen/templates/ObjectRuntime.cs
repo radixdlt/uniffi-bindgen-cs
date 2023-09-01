@@ -77,6 +77,10 @@ static class FFIObjectUtil {
                     foreach (var value in obj) {
                         Dispose(value);
                     }
+                } else if (type.GetGenericTypeDefinition().IsAssignableFrom(typeof(Array))) {
+                    foreach (var value in obj) {
+                        Dispose(value);
+                    }
                 } else if (type.GetGenericTypeDefinition().IsAssignableFrom(typeof(Dictionary<,>))) {
                     foreach (var value in obj.Values) {
                         Dispose(value);
