@@ -12,14 +12,14 @@ crate-type = ["cdylib", "lib"]
 global-methods-class-name = { path = "global-methods-class-name" }
 uniffi-cs-custom-types-builtin = { path = "custom-types-builtin" }
 uniffi-cs-disposable-fixture = { path = "disposable" }
-uniffi-example-arithmetic = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-example-callbacks = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-example-custom-types = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-example-geometry = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-example-rondpoint = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-example-sprites = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-example-todolist = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-fixture-callbacks = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-fixture-coverall = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-fixture-time = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
-uniffi-fixture-trait-methods = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3" }
+uniffi-example-arithmetic = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-example-callbacks = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-example-custom-types = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-example-geometry = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-example-rondpoint = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-example-sprites = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-example-todolist = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-fixture-callbacks = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-fixture-coverall = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-fixture-time = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
+uniffi-fixture-trait-methods = { git = "https://github.com/0xOmarA/uniffi-rs", tag = "v0.25.4" }
