@@ -12,15 +12,15 @@ crate-type = ["cdylib", "lib"]
 global-methods-class-name = { path = "global-methods-class-name" }
 uniffi-cs-custom-types-builtin = { path = "custom-types-builtin" }
 uniffi-cs-disposable-fixture = { path = "disposable" }
-uniffi-example-arithmetic = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-example-callbacks = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-example-custom-types = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-example-geometry = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-example-rondpoint = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-example-sprites = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-example-todolist = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-fixture-callbacks = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-fixture-coverall = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-fixture-docstring = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-fixture-time = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
-uniffi-fixture-trait-methods = { git = "https://github.com/NordSecurity/uniffi-rs", rev = "de1e773204d0ddcda58faac0a77570f1f8056679" }
+uniffi-example-arithmetic = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-example-callbacks = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-example-custom-types = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-example-geometry = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-example-rondpoint = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-example-sprites = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-example-todolist = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-fixture-callbacks = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-fixture-coverall = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-fixture-docstring = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-fixture-time = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }
+uniffi-fixture-trait-methods = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38" }

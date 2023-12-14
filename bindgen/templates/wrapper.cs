@@ -29,7 +29,6 @@
 using {{ imported_class }};
 {%- endfor %}
 
-{%- call cs::docstring(ci.namespace_definition(), 0) %}
 namespace {{ config.namespace() }};
 
 {%- for alias in self.type_aliases() %}
