@@ -98,5 +98,8 @@
 {%- when Type::External { module_path, name, namespace, kind, tagged } %}
 {% include "ExternalTypeTemplate.cs" %}
 
+{%- when Type::ForeignExecutor %}
+{{ "ForeignExecutor not implemented in Types.cs {}"|panic }}
+
 {%- endmatch %}
 {%- endfor %}

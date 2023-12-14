@@ -14,7 +14,6 @@ mod uniffi_fixtures {
     uniffi_chronological::uniffi_reexport_scaffolding!();
     uniffi_coverall::uniffi_reexport_scaffolding!();
     uniffi_fixture_callbacks::uniffi_reexport_scaffolding!();
-    uniffi_fixture_docstring::uniffi_reexport_scaffolding!();
     uniffi_trait_methods::uniffi_reexport_scaffolding!();
 
     global_methods_class_name::uniffi_reexport_scaffolding!();

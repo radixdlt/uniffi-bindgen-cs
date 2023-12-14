@@ -11,8 +11,8 @@ name = "uniffi_cs_disposable"
 [dependencies]
 once_cell = "1.12"
 thiserror = "1.0"
-uniffi = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38", features=["build"]}
-uniffi_macros = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38"}
+uniffi = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3", features=["build"]}
+uniffi_macros = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3"}
 
 [build-dependencies]
-uniffi = { git = "https://github.com/mozilla/uniffi-rs", rev = "68b14c95a653b8da3a57b8417d1142bd190eac38", features=["bindgen-tests"]}
+uniffi = { git = "https://github.com/mozilla/uniffi-rs", tag = "v0.25.3", features=["bindgen-tests"]}

@@ -270,6 +270,7 @@ impl<T: AsType> AsCodeType for T {
             } => Box::new(compounds::MapCodeType::new(*key_type, *value_type)),
             Type::External { name, .. } => Box::new(external::ExternalCodeType::new(name)),
             Type::Custom { name, .. } => Box::new(custom::CustomCodeType::new(name)),
+            Type::ForeignExecutor => panic!("Not implemented!"),
         }
     }
 }
@@ -335,6 +336,7 @@ impl CsCodeOracle {
             FfiType::RustFutureHandle => "IntPtr".to_string(),
             FfiType::RustFutureContinuationCallback => "IntPtr".to_string(),
             FfiType::RustFutureContinuationData => "IntPtr".to_string(),
+            FfiType::ForeignExecutorHandle | FfiType::ForeignExecutorCallback => unimplemented!(),
         }
     }
 }
@@ -466,15 +468,6 @@ pub mod filters {
             // XXX - not sure how we are supposed to return askama::Error?
             _ => panic!("unsupported type for error: {type_:?}"),
         }
-    }
-
-    /// Get the idiomatic C# rendering of docstring
-    pub fn docstring(docstring: &str, spaces: &i32) -> Result<String, askama::Error> {
-        let middle = textwrap::indent(&textwrap::dedent(docstring), "/// ");
-        let wrapped = format!("/// <summary>\n{middle}\n/// </summary>");
-
-        let spaces = usize::try_from(*spaces).unwrap_or_default();
-        Ok(textwrap::indent(&wrapped, &" ".repeat(spaces)))
     }
 
     /// Panic with message

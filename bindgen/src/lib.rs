@@ -135,7 +135,6 @@ pub fn main() -> Result<()> {
             },
             &cli.source,
             cli.crate_name,
-            cli.config.as_deref(),
             &out_dir,
         )
         .map(|_| ())
